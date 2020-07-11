@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="col-md-9 col-sm-6 col-xs-12">
+<div class="panel panel-default">
+   <div class="panel panel-heading"> Ajouter un nouveau Produit</div>
+   <div class="panel panel-body">
+     <form #f="ngForm" (ngSubmit)="onSaveProduct(f.value)">
+       <div class="form-group">
+         <label class="control-label">Name</label>
+         <input class="form-control" type="text"  name="name" ngModel>
+       </div>
+       <div class="form-group">
+         <label class="control-label">Description  promotion</label>
+         <input class="form-control" type="text"  name="description" ngModel>
+       </div>
+       <div class="form-group">
+         <label class="control-label">Promotion</label>
+         <input class="form-control" type="text"  name="promotion" ngModel>
+       </div>
+       <div class="form-group">
+         <label class="control-label">Selected  available</label>
+         <input class="form-control" type="text"  name="selected" ngModel>
+       </div>
+       <div class="form-group">
+         <label class="control-label">Available</label>
+         <input class="form-control" type="text"  name="available" ngModel>
+       </div>
+       <div class="form-group">
+         <label class="control-label">PhotoName</label>
+         <input class="form-control" type="text"  name="photoName" ngModel>
+       </div>
+
+
+
+       <div class="form-group">
+         <label class="control-label">Quantity</label>
+         <input class="form-control" type="text"  name="quantity" ngModel>
+       </div>
+       <button class="btn btn-success" type="submit" >Save</button>
+
+     </form>
+   </div>
+
+ </div>
+  </div>
+</div>
