@@ -20,7 +20,7 @@
       </form>
 
       <table *ngIf="produits"  class="table  table-striped t1">
-        <tr><th>ID</th> <th>NAME</th> <th>CurrentPrice</th> <th>QTE</th> <th>PROMO</th> <th>Delete</th></tr>
+        <tr><th>ID</th> <th>NAME</th> <th>CurrentPrice</th> <th>QTE</th> <th>PROMO</th> <th>Delete</th> <th>Update</th> </tr>
         <tr *ngFor=" let p of produits._embedded.products">
           <td>{{p.id}}</td>
           <td>{{p.name}}</td>
@@ -28,6 +28,7 @@
           <td>{{p.quantity}}</td>
           <td>{{p.promotion}}</td>
           <td><a class="btn btn-danger"  (click)="onDeleteProduct(p)"> Delete</a></td>
+          <td><a class="btn btn-success"  (click)="onUpdateProduct(p)"><span class="glyphicon glyphicon-edit"></span>Update</a></td>
         </tr>
       </table>
       <ul  *ngIf="pages" class="nav nav-pills">
@@ -36,6 +37,9 @@
         </li>
       </ul>
     </div>
+
+
+
 
   </div>
 </div>

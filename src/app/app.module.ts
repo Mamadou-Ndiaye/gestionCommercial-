@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CaddiesComponent } from './caddies/caddies.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

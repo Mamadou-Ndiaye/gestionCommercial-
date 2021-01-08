@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {CatalogueService} from '../services/catalogue.service';
+import {Product} from '../model/product.model';
 
 @Component({
   selector: 'app-produits',
@@ -15,6 +16,7 @@ export class ProduitsComponent implements OnInit {
   public  pages:Array<number>;
   // on fait l'injection de dependance
   private currentKeyword: string;
+  private mode: number=2;
   constructor(private catService: CatalogueService) { }
 
   ngOnInit() {
@@ -67,6 +69,19 @@ export class ProduitsComponent implements OnInit {
         });
 
     }
+
+  }
+
+
+  onUpdateProduct(p: Product) {
+    console.log(p);
+    this.catService.updateResssouce(p._links.self.href,p)
+      .subscribe(data=>{
+        this.chercherProduit()
+        this.mode=1;
+      },error => {
+        console.log(error);
+      });
 
   }
 }

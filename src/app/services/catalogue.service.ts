@@ -38,6 +38,11 @@ export class CatalogueService {
 
   }
 
+  public updateResssouce(url,data) {
+    return this.httpClient.put(url,data);
+
+  }
+
   uploadPhotoProduct(file: File, idProduct) {
     let formdata: FormData = new FormData();
     formdata.append('file', file);
