@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpClientModule, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Product} from '../model/product.model';
+import {environment} from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CatalogueService {
 
-  public  host ="http://localhost:9090";
+  //public  host ="http://localhost:9090";
+  // public  host ="https://vente-en-ligne-backend.herokuapp.com/";
+  public  host =environment.host;
 
   constructor(private  httpClient: HttpClient) { }
 //methode generique pour recuperer une ressource

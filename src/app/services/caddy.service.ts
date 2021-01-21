@@ -8,7 +8,7 @@ import {ProductItem} from '../model/product-Item.model';
 })
 export class CaddyService {
 
-  currentCaddyName:string='Caddy1';
+  public  currentCaddyName:string='Caddy1';
   //on gere une liste de panier
   public  caddies:Map<string,Caddy>=new Map();
 

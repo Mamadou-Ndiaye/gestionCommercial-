@@ -11,8 +11,8 @@ import {CaddyService} from './services/caddy.service';
 })
 export class AppComponent implements  OnInit{
 
-  texte:string;
-  mesProduits:any
+  public  texte:string;
+   public  mesProduits:any
  /* info={nom:"Ndiaye",
         prenom:"Mamadou",
         Email:"ndiamamadou@gmail.com",
@@ -20,8 +20,8 @@ export class AppComponent implements  OnInit{
 
 
        }*/
-  private categories;
-  private currentCategory;
+  public categories;
+  public currentCategory;
   constructor(private  catService:CatalogueService,
               private  router:Router,
               private authenticationService:AuthentificationService,

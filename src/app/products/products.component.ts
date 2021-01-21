@@ -12,17 +12,17 @@ import {CaddyService} from '../services/caddy.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  private products;
-  private editPhoto: boolean;
-  private currentProduct: any;
-  private selectedFiles: any;
-  private progress: number;
-  private currentFileUpload: any;
-  private currentTime: number;
-  private title :string;
-  private  timestamp:number=0;
+   public products;
+  public editPhoto: boolean;
+  public currentProduct: any;
+  public selectedFiles: any;
+  public progress: number;
+  public currentFileUpload: any;
+  public  currentTime: number;
+  public  title :string;
+  public timestamp:number=0;
 
-  constructor(private  catalogueService:CatalogueService,
+  constructor( public  catalogueService:CatalogueService,
               private route:ActivatedRoute,
               private  router:Router,
               public  authenticationService:AuthentificationService,

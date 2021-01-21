@@ -11,16 +11,15 @@ import {AuthentificationService} from '../services/authentification.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  private  currentProduct;
-  mode: number=0;
-  private editPhoto: boolean;
-  selectedFiles;
-  private progress: number;
-  private currentTime: number;
-  currentFileUpload;
+  public currentProduct;
+  public  mode: number=0;editPhoto: boolean;
+  public  selectedFiles;
+  public  progress: number;
+  public  currentTime: number;
+  public  currentFileUpload;
   constructor(private router:Router,
               private route:ActivatedRoute,
-              private  catalogueService:CatalogueService,
+              public  catalogueService:CatalogueService,
               public authenticationService:AuthentificationService ) { }
 
   ngOnInit() {

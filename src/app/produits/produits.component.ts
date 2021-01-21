@@ -15,9 +15,9 @@ export class ProduitsComponent implements OnInit {
   public  totalPages:number;
   public  pages:Array<number>;
   // on fait l'injection de dependance
-  private currentKeyword: string;
-  private mode: number=2;
-  constructor(private catService: CatalogueService) { }
+  public currentKeyword: string;
+  public mode: number=2;
+  constructor(public catService: CatalogueService) { }
 
   ngOnInit() {
   }
